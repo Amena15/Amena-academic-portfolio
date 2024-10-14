@@ -1,0 +1,158 @@
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f0f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: #5d2571;
+}
+
+a:hover {
+    color: #a97fed;
+}
+
+/* Header Section */
+header {
+    background-color: #5d2571;
+    padding: 10px 0;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #f9e8be;
+}
+
+/* Hero Section */
+.hero-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #e6e6ff;
+}
+
+.profile-photo {
+    width: 150px; 
+    height: auto; 
+    border-radius: 50%; 
+    display: block; 
+    margin: 10px auto; 
+    border: 4px solid #5d2571;
+}
+
+.intro-text h1 {
+    font-size: 2.5rem;
+    color: #5d2571;
+}
+
+.intro-text p {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+/* Section Styles */
+main section {
+    padding: 20px;
+    margin: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #5d2571;
+}
+
+p, ul li {
+    font-size: 1rem;
+    color: #555;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+ul li strong {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+/* Skills Section */
+.skills-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.skill {
+    width: 30%;
+    padding: 15px;
+    background-color: #f9e8be;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.skill h3 {
+    font-size: 1.4rem;
+    color: #333;
+}
+
+/* Footer Section */
+footer {
+    background-color: #5d2571;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer .social-icons {
+    display: flex;
+    justify-content: center; 
+    margin: 20px 0; 
+}
+
+footer .social-icons a {
+    font-size: 30px; /* This affects spacing, not SVG size */
+    margin: 0 10px; 
+    transition: color 0.3s; 
+}
+
+/* Make the icons bigger by adjusting the SVG size */
+footer .social-icons svg {
+    width: 40px; /* Increase the width */
+    height: 40px; /* Increase the height */
+    fill: #ffffff; /* Default color */
+    transition: fill 0.3s ease; /* Smooth transition for color change */
+}
+
+/* Change color on hover */
+footer .social-icons a:hover svg {
+    fill: #a97fed; /* Change icon color on hover */
+}
