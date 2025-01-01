@@ -35,7 +35,7 @@
 
 /* Hover effect for link boxes */
 .link-box:hover {
-    transform: translateY(-3px); /* Slight upward movement */
+    transform: translateY(-3px); /* Slight upward movement */ 
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
 }
 
