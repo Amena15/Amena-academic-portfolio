@@ -25,8 +25,8 @@
 
 /* Style for link boxes */
 .link-box {
-    background-color: #f0cfe9; /* Light green background for link boxes */
-    border: 1px solid #f7f7f7; /* Soft green border */
+    background-color: #f6e8ca; 
+    border: 1px solid #f7f7f7; 
     border-radius: 8px; /* Rounded corners */
     padding: 15px; /* Inner padding */
     margin-bottom: 10px; /* Space between link boxes */
@@ -48,6 +48,6 @@
 
 /* Link hover effect */
 .link-box a:hover {
-    color: #7cbde3; /* Darker purple on hover */
+    color: #6a42a2; /* Darker purple on hover */
     text-decoration: underline; /* Underline on hover */
 }
