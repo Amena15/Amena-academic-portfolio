@@ -1,4 +1,4 @@
-```
+
 # AmenaTech Academic Portfolio 🌟
 
 Welcome to **AmenaTech** — a personal academic portfolio built by *Amena Mohammed*, a Computer Science undergraduate at Multimedia University (MMU), Malaysia. This website showcases my academic journey, coursework, and projects across various subjects from the Bachelor of Computer Science (Hons.) program.
@@ -43,5 +43,4 @@ To run this project locally:
 git clone https://github.com/Amena15/Amena-academic-portfolio.git
 cd Amena-academic-portfolio
 open index.html  # Or use your browser to view the page
-```
 ```
