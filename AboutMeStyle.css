@@ -36,11 +36,12 @@ header nav ul li {
 header nav ul li a {
     color: white;
     font-weight: 500;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 header nav ul li a:hover {
     color: #f9e8be;
+    transform: scale(1.1);
 }
 
 /* Hero Section */
@@ -51,11 +52,11 @@ header nav ul li a:hover {
 }
 
 .profile-photo {
-    width: 150px; 
-    height: auto; 
-    border-radius: 50%; 
-    display: block; 
-    margin: 10px auto; 
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+    display: block;
+    margin: 10px auto;
     border: 4px solid #5d2571;
 }
 
@@ -103,25 +104,122 @@ ul li strong {
     color: #333;
 }
 
-/* Skills Section */
-.skills-container {
+/* Timeline Section */
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px 0;
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
 }
 
-.skill {
-    width: 30%;
-    padding: 15px;
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background-color: #5d2571;
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    position: relative;
+    padding: 20px 0;
+}
+
+.timeline-item:nth-child(odd) {
+    flex-direction: row-reverse; /* Right-side alignment for odd items */
+}
+
+.timeline-content {
     background-color: #f9e8be;
+    padding: 15px;
     border-radius: 10px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    width: 45%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.skill h3 {
+.timeline-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 25px;
+    width: 15px;
+    height: 15px;
+    background-color: #5d2571;
+    border-radius: 50%;
+    transform: translateX(-50%);
+}
+
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 5%;
+    }
+
+    .timeline-item {
+        flex-direction: column !important;
+        align-items: flex-start;
+    }
+
+    .timeline-content {
+        width: 90%;
+        margin-left: 5%;
+    }
+}
+
+/* Skills Section */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.skill-category {
+    background-color: #f9e8be;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.skill-category h3 {
     font-size: 1.4rem;
     color: #333;
+    margin-bottom: 10px;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-tag {
+    background-color: #5d2571;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.skill-tag:hover {
+    background-color: #421b52;
+    transform: scale(1.05);
 }
 
 /* Footer Section */
@@ -132,27 +230,149 @@ footer {
     padding: 20px;
 }
 
+/* Project Grid Styles */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.github-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    min-height: 250px; /* Set a minimum height */
+    height: auto;
+    border: 1px solid #e1e1e1;
+    margin: 0;
+    overflow: hidden; /* Prevents content from bleeding out */
+}
+
+.github-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.github-card h3 {
+    color: #5d2571;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.github-card p {
+    color: #555;
+    flex-grow: 1;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.repo-stats {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.repo-stats span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.github-card a {
+    display: inline-block;
+    background-color: #5d2571;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    margin-top: auto; /* Pushes button to bottom */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.github-card a:hover {
+    background-color: #421b52;
+    text-decoration: none;
+}
+
+/* Loading States */
+.loading, .no-projects, .error {
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.2rem;
+    grid-column: 1 / -1;
+}
+
+.loading {
+    color: #5d2571;
+}
+
+.error {
+    color: #e74c3c;
+}
+
+.no-projects {
+    color: #666;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .github-card {
+        padding: 15px;
+    }
+}
+
 footer .social-icons {
     display: flex;
-    justify-content: center; 
-    margin: 20px 0; 
+    justify-content: center;
+    margin: 20px 0;
 }
 
-footer .social-icons a {
-    font-size: 30px; /* This affects spacing, not SVG size */
-    margin: 0 10px; 
-    transition: color 0.3s; 
-}
-
-/* Make the icons bigger by adjusting the SVG size */
 footer .social-icons svg {
-    width: 40px; /* Increase the width */
-    height: 40px; /* Increase the height */
-    fill: #ffffff; /* Default color */
-    transition: fill 0.3s ease; /* Smooth transition for color change */
+    width: 40px;
+    height: 40px;
+    fill: white;
+    transition: fill 0.3s ease, transform 0.3s ease;
 }
 
-/* Change color on hover */
 footer .social-icons a:hover svg {
-    fill: #a97fed; /* Change icon color on hover */
+    fill: #a97fed;
+    transform: scale(1.1);
+}
+
+/* Scroll-Up Animation */
+@keyframes slideUp {
+    from {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Apply Animation to All Sections and Content */
+section, .timeline-item, .skill-category, .card, footer {
+    opacity: 0; /* Start with content invisible */
+    transform: translateY(100px); /* Start below the viewport */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+section.visible, .timeline-item.visible, .skill-category.visible, .card.visible, footer.visible {
+    opacity: 1; /* Make content visible */
+    transform: translateY(0); /* Move content to its original position */
 }
