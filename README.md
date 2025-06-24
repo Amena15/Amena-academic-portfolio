@@ -32,15 +32,3 @@ The website is fully responsive, user-friendly, and developed using only front-e
 ## **🧠 Motivation**
 
 > "This site reflects my continuous learning as a tech enthusiast and future software engineer. It serves as both a self-tracking tool and a public academic footprint to share knowledge with peers and potential collaborators."
-
----
-
-## **📌 Getting Started Locally**
-
-To run this project locally:
-
-```bash
-git clone https://github.com/Amena15/Amena-academic-portfolio.git
-cd Amena-academic-portfolio
-open index.html  # Or use your browser to view the page
-```
