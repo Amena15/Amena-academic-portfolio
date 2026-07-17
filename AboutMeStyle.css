@@ -1,261 +1,62 @@
-/* Global Styles */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    background-color: #f0f0f5;
-    color: #333;
-    line-height: 1.6;
-}
-
-a {
-    text-decoration: none;
-    color: #5d2571;
-}
-
-a:hover {
-    color: #a97fed;
-}
-
-/* Header Section */
-header {
-    background-color: #5d2571;
-    padding: 10px 0;
-}
-
-header nav ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-}
-
-header nav ul li {
-    margin: 0 15px;
-}
-
-header nav ul li a {
-    color: white;
-    font-weight: 500;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-header nav ul li a:hover {
-    color: #f9e8be;
-    transform: scale(1.1);
-}
-
-/* Hero Section */
 .hero-section {
-    text-align: center;
-    padding: 50px 20px;
-    background-color: #e6e6ff;
+    grid-template-columns: minmax(180px, 240px) minmax(0, 1fr);
+    text-align: left;
 }
 
-.profile-photo {
-    width: 150px;
-    height: auto;
-    border-radius: 50%;
-    display: block;
-    margin: 10px auto;
-    border: 4px solid #5d2571;
+.intro-text {
+    display: grid;
+    gap: 0.8rem;
 }
 
 .intro-text h1 {
-    font-size: 2.5rem;
-    color: #5d2571;
+    font-size: clamp(2.4rem, 5vw, 4.4rem);
 }
 
 .intro-text p {
-    font-size: 1.2rem;
-    color: #333;
+    max-width: 56ch;
+    font-size: 1.08rem;
 }
 
-/* Section Styles */
-main section {
-    padding: 20px;
-    margin: 20px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+#career,
+#education,
+#skills,
+#projects {
+    display: grid;
+    gap: 1rem;
 }
 
-h2 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-    color: #5d2571;
+#career p,
+#education p,
+#projects p {
+    max-width: 68ch;
 }
 
-p, ul li {
-    font-size: 1rem;
-    color: #555;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-ul li {
-    margin-bottom: 10px;
-}
-
-ul li strong {
-    font-size: 1.2rem;
-    color: #333;
-}
-
-/* Timeline Section */
 .timeline {
-    position: relative;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.timeline::before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: 0;
-    width: 2px;
-    height: 100%;
-    background-color: #5d2571;
-    transform: translateX(-50%);
+    max-width: 100%;
+    gap: 1.25rem;
 }
 
 .timeline-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    max-width: 800px;
-    position: relative;
-    padding: 20px 0;
+    margin-bottom: 1.2rem;
 }
 
-.timeline-item:nth-child(odd) {
-    flex-direction: row-reverse; /* Right-side alignment for odd items */
+.timeline-content p + p {
+    margin-top: 0.35rem;
 }
 
-.timeline-content {
-    background-color: #f9e8be;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-    width: 45%;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.timeline-content:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.timeline-item::before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: 25px;
-    width: 15px;
-    height: 15px;
-    background-color: #5d2571;
-    border-radius: 50%;
-    transform: translateX(-50%);
+.project-grid {
+    margin-top: 0.4rem;
 }
 
 @media (max-width: 768px) {
-    .timeline::before {
-        left: 5%;
+    .hero-section {
+        grid-template-columns: 1fr;
+        text-align: center;
     }
 
-    .timeline-item {
-        flex-direction: column !important;
-        align-items: flex-start;
+    .intro-text p {
+        margin: 0 auto;
     }
-
-    .timeline-content {
-        width: 90%;
-        margin-left: 5%;
-    }
-}
-
-/* Skills Section */
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.skill-category {
-    background-color: #f9e8be;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.skill-category h3 {
-    font-size: 1.4rem;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-.skill-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.skill-tag {
-    background-color: #5d2571;
-    color: white;
-    padding: 8px 12px;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.skill-tag:hover {
-    background-color: #421b52;
-    transform: scale(1.05);
-}
-
-/* Footer Section */
-footer {
-    background-color: #5d2571;
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
-
-/* Project Grid Styles */
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 25px;
-    margin-top: 20px;
-}
-
-.github-card {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 25px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    min-height: 250px; /* Set a minimum height */
-    height: auto;
-    border: 1px solid #e1e1e1;
-    margin: 0;
-    overflow: hidden; /* Prevents content from bleeding out */
-}
-
-.github-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
 .github-card h3 {
@@ -365,14 +166,10 @@ footer .social-icons a:hover svg {
     }
 }
 
-/* Apply Animation to All Sections and Content */
-section, .timeline-item, .skill-category, .card, footer {
-    opacity: 0; /* Start with content invisible */
-    transform: translateY(100px); /* Start below the viewport */
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
+/* NOTE:
+   AboutMeStyle previously forced all sections/cards/footers to be hidden by default.
+   This can conflict with the shared site animations in style.css + script.js and may
+   cause buttons/links to appear missing or overlap.
+   Shared animations should be driven by [data-animate] + .visible instead.
+*/
 
-section.visible, .timeline-item.visible, .skill-category.visible, .card.visible, footer.visible {
-    opacity: 1; /* Make content visible */
-    transform: translateY(0); /* Move content to its original position */
-}

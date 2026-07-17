@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="description" content="Study area for AmenaTech: course catalog, learning tools, study path, notes, and progress tracking.">
+    <meta name="keywords" content="study, courses, notes, progress, AmenaTech">
+    <meta name="author" content="Amena Mohammed">
+    <meta property="og:title" content="AmenaTech Study Area">
+    <meta property="og:description" content="Your dedicated workspace for courses, notes, progress tracking, and learning tools.">
+    <meta property="og:image" content="mainPage.png">
+    <meta property="og:url" content="https://amena15.github.io/Amena-academic-portfolio/study.html">
+    <meta property="og:type" content="website">
+    <title>AmenaTech - Study Area</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="style.css" as="style">
+    <link rel="preload" href="script.js" as="script">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="icon.png" type="image/png">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="nav-container" aria-label="Main navigation">
+            <a href="index.html" class="logo">Amena<span>Tech</span></a>
+            <button class="hamburger" aria-expanded="false" aria-label="Menu" aria-controls="nav-links">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="AboutMe.html">About</a></li>
+                <li><a href="study.html#courses">Study</a></li>
+                <li><a href="study.html#learning-tools">Tools</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#footer">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section id="learning-tools" class="platform-tools" data-animate="fadeUp">
+            <div class="section-heading">
+                <p class="eyebrow">Platform features</p>
+                <h2>What makes this a learning platform</h2>
+                <p>These improvements are designed around software engineering principles: reuse shared behavior, preserve baseline content, and keep the platform deployable on GitHub Pages.</p>
+            </div>
+            <div class="tool-grid">
+                <article class="tool-card">
+                    <h3>Course search</h3>
+                    <p>Filter courses instantly by title, code, or topic from the homepage.</p>
+                </article>
+                <article class="tool-card">
+                    <h3>Personal notes</h3>
+                    <p>Write notes directly on course pages and keep them locally in your browser.</p>
+                </article>
+                <article class="tool-card">
+                    <h3>Progress memory</h3>
+                    <p>Mark resources as completed and keep track of your study progress between visits.</p>
+                </article>
+                <article class="tool-card">
+                    <h3>Resource summaries</h3>
+                    <p>Each course can show counts for lecture notes, tutorials, and PYQ resources automatically.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="courses" class="courses-section" data-animate="fadeUp">
+            <div class="section-heading section-heading-inline">
+                <div>
+                    <p class="eyebrow">Course library</p>
+                    <h2>Explore courses by year</h2>
+                </div>
+                <div class="course-toolbar" aria-label="Course controls">
+                    <label class="search-label" for="course-search">Search courses</label>
+                    <input id="course-search" class="course-search" type="search" placeholder="Try software engineering, calculus, OS..." autocomplete="off">
+                </div>
+            </div>
+
+            <div class="accordion course-accordion">
+                <button class="accordion-btn" aria-expanded="true">Year 1 <span>8 courses</span></button>
+                <div class="accordion-content accordion-visible">
+                    <div class="course-grid">
+                        <article class="card" data-course-title="Calculus TMA1101" data-course-code="TMA1101" data-course-keywords="calculus mathematics integration differentiation">
+                            <div class="card-header">
+                                <p class="card-tag">Year 1</p>
+                                <h3><a href="TMA1101.html" class="no-underline">Calculus</a></h3>
+                                <p class="course-code">TMA1101</p>
+                                <div class="card-description">Delve into limits, derivatives, and integrals with real-world applications.</div>
+                            </div>
+                            <div class="card-nav">
+                                <a href="TMA1101.html#lecture-notes">Lecture Notes</a>
+                                <a href="TMA1101.html#tutorial">Tutorial</a>
+                                <a href="TMA1101.html#PYQ">PYQ</a>
+                            </div>
+                        </article>
+
+                        <article class="card" data-course-title="Discrete Structures and Probability TMA1201" data-course-code="TMA1201" data-course-keywords="discrete mathematics graph theory probability">
+                            <div class="card-header">
+                                <p class="card-tag">Year 1</p>
+                                <h3><a href="TMA1201.html" class="no-underline">Discrete Structures and Probability</a></h3>
+                                <p class="course-code">TMA1201</p>
+                                <div class="card-description">Study combinatorics, graph theory, logic, and probability foundations.</div>
+                            </div>
+                            <div class="card-nav">
+                                <a href="TMA1201.html#lecture-notes">Lecture Notes</a>
+                                <a href="TMA1201.html#tutorial">Tutorial</a>
+                                <a href="TMA1201.html#PYQ">PYQ</a>
+                            </div>
+                        </article>
+
+                        <article class="card" data-course-title="Programming Fundamentals TCP1101" data-course-code="TCP1101" data-course-keywords="programming algorithms problem solving">
+                            <div class="card-header">
+                                <p class="card-tag">Year 1</p>
+                                <h3><a href="TCP1101.html" class="no-underline">Programming Fundamentals</a></h3>
+                                <p class="course-code">TCP1101</p>
+                                <div class="card-description">Learn core programming principles, algorithmic thinking, and software basics.</div>
+                            </div>
+                            <div class="card-nav">
+                                <a href="TCP1101.html#lecture-notes">Lecture Notes</a>
+                                <a href="TCP1101.html#tutorial">Tutorial</a>
+                                <a href="TCP1101.html#PYQ">PYQ</a>
+                            </div>
+                        </article>
+
+                        <article class="card" data-course-title="Computational Methods CMA6134" data-course-code="CMA6134" data-course-keywords="numerical methods algorithms computation">
+                            <div class="card-header">
+                                <p class="card-tag">Year 1</p>
+                                <h3><a href="CMA6134.html" class="no-underline">Computational Methods</a></h3>
+                                <p class="course-code">CMA6134</p>
+                                <div class="card-description">Explore numerical techniques and algorithms for solving mathematical problems.</div>
+                            </div>
+                            <div class="card-nav">
+                                <a href="CMA6134.html#lecture-notes">Lecture Notes</a>
+                                <a href="CMA6134.html#tutorial">Tutorial</a>
+                                <a href="CMA6134.html#PYQ">PYQ</a>
+                            </div>
+                        </article>
+
+                        <article class="card" data-course-title="Computer Architecture and Organization CSN6114" data-course-code="CSN6114" data-course-keywords="computer architecture hardware systems">
+                            <div class="card-header">
+                                <p class="card-tag">Year 1</p>
+                                <h3><a href="CSN6114.html" class="no-underline">Computer Architecture and Organization</a></h3>
+                                <p class="course-code">CSN6114</p>
+                                <div class="card-description">Understand hardware organization, components, and computer system behavior.</div>
+                            </div>
+                            <div class="card-nav">
+                                <a href="CSN6114.html#lecture-notes">Lecture Notes</a>
+                                <a href="CSN6114.html#tutorial">Tutorial</a>
+                                <a href="CSN6114.html#PYQ">PYQ</a>
+                            </div>
+                        </article>
+
+                        <article class="card" data-course-title="Object-Oriented Programming and Data Structures CCP6124" data-course-code="CCP6124" data-course-keywords="oop data structures java programming">
+                            <div class="card-header">
+                                <p class="card-tag">Year 1</p>
+                                <h3><a href="CCP6124.html" class="no-underline">Object-Oriented Programming and Data Structures</a></h3>
+                                <p class="course-code">CCP6124</p>
+                                <div class="card-description">Learn object-oriented design and the data structures behind efficient programs.</div>
+                            </div>
+                            <div class="card-nav">
+                                <a href="CCP6124.html#lecture-notes">Lecture Notes</a>
+                                <a href="CCP6124.html#tutorial">Tutorial</a>
+                                <a href="CCP6124.html#PYQ">PYQ</a>
+                            </div>
+                        </article>
+
+                        <article class="card" data-course-title="Database Fundamentals CIT6114" data-course-code="CIT6114" data-course-keywords="database sql data modeling">
+                            <div class="card-header">
+                                <p class="card-tag">Year 1</p>
+                                <h3><a href="CIT6114.html" class="no-underline">Database Fundamentals</a></h3>
+                                <p class="course-code">CIT6114</p>
+                                <div class="card-description">Cover database design, data modeling, and SQL-based retrieval fundamentals.</div>
+                            </div>
+                            <div class="card-nav">
+                                <a href="CIT6114.html#lecture-notes">Lecture Notes</a>
+                                <a href="CIT6114.html#tutorial">Tutorial</a>
+                            </div>
+                        </article>
+
+                        <article class="card" data-course-title="Research Method in Computer Science CPT6123" data-course-code="CPT6123" data-course-keywords="research methodology academic writing">
+                            <div class="card-header">
+                                <p class="card-tag">Year 1</p>
+                                <h3><a href="CPT6123.html" class="no-underline">Research Method in Computer Science</a></h3>
+                                <p class="course-code">CPT6123</p>
+                                <div class="card-description">Build stronger research habits, academic writing, and investigation methods.</div>
+                            </div>
+                            <div class="card-nav">
+                                <a href="CPT6123.html#lecture-notes">Lecture Notes</a>
+                                <a href="CPT6123.html#tutorial">Tutorial</a>
+                                <a href="CPT6123.html#PYQ">PYQ</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <button class="accordion-btn" aria-expanded="false">Year 2 <span>9 courses</span></button>
+                <div class="accordion-content">
+                    <div class="course-grid">
+                        <article class="card" data-course-title="Software Engineering Fundamentals CSE6214" data-course-code="CSE6214" data-course-keywords="software engineering lifecycle requirements">
+                            <div class="card-header">
+                                <p class="card-tag">Year 2</p>
+                                <h3><a href="CSE6214.html" class="no-underline">Software Engineering Fundamentals</a></h3>
+                                <p class="course-code">CSE6214</p>
+                                <div class="card-description">Explore lifecycle thinking, engineering methods, and core SE practices.</div>
+                            </div>
+                            <div class="card-nav">
+                                <a href="CSE6214.html#lecture-notes">Lecture Notes</a>
+                                <a href="CSE6214.html#tutorial">Tutorial</a>
+                                <a href="CSE6214.html#PYQ">PYQ</a>
+                            </div>
+                        </article>
+
+                        <article class="card" data-course-title="OOAD CCP6224" data-course-code="CCP6224" data-course-keywords="object oriented analysis design patterns architecture">
+                            <div class="card-header">
+                                <p class="card-tag">Year 2</p>
+                                <h3><a href="CCP6224.html" class="no-underline">OOAD</a></h3>
+                                <p class="course-code">CCP6224</p>
+                                <div class="card-description">Focus on analysis, design patterns, and architecture-driven thinking.</div>
+                            </div>
+                            <div class="card-nav">
+                                <a href="CCP6224.html#lecture-notes">Lecture Notes</a>
+                                <a href="CCP6224.html#tutorial">Tutorial</a>
+                            </div>
+                        </article>
+
+                        <article class="card" data-course-title="Operating System CSN6214" data-course-code="CSN6214" data-course-keywords="operating system memory processes concurrency">
+                            <div class="card-header">
+                                <p class="card-tag">Year 2</p>
+                                <h3><a href="CSN6214.html" class="no-underline">Operating System</a></h3>
+                                <p class="course-code">CSN6214</p>
+                                <div class="card-description">Study process management, memory, scheduling, and systems behavior.</div>
+                            </div>
+                            <div class="card-nav">
+                                <a href="CSN6214.html#lecture-notes">Lecture Notes</a>
+                                <a href="CSN6214.html#tutorial">Tutorial</a>
+                                <a href="CSN6214.html#PYQ">PYQ</a>
+                            </div>
+                        </article>
+
+                        <article class="card" data-course-title="Computer Networks CSN6224" data-course-code="CSN6224" data-course-keywords="networking protocols security internet">
+                            <div class="card-header">
+                                <p class="card-tag">Year 2</p>
+                                <h3><a href="CSN6224.html" class="no-underline">Computer Networks</a></h3>
+                                <p class="course-code">CSN6224</p>
+                                <div class="card-description">Cover network models, protocols, architectures, and basic security concerns.</div>
+                            </div>
+                            <div class="card-nav">
+                                <a href="CSN6224.html#lecture-notes">Lecture Notes</a>
+                                <a href="CSN6224.html#tutorial">Tutorial</a>
+                                <a href="CSN6224.html#PYQ">PYQ</a>
+                            </div>
+                        </article>
+
+                        <article class="card" data-course-title="Algorithm Design and Analysis CCP6214" data-course-code="CCP6214" data-course-keywords="algorithms complexity analysis optimization">
+                            <div class="card-header">
+                                <p class="card-tag">Year 2</p>
+                                <h3><a href="CCP6214.html" class="no-underline">Algorithm Design and Analysis</a></h3>
+                                <p class="course-code">CCP6214</p>
+                                <div class="card-description">Explore complexity, algorithmic strategies, and efficient problem solving.</div>
+                            </div>
+                            <div class="card-nav">
+                                <a href="CCP6214.html#lecture-notes">Lecture Notes</a>
+                                <a href="CCP6214.html#tutorial">Tutorial</a>
+                                <a href="CCP6214.html#PYQ">PYQ</a>
+                            </div>
+                        </article>
+
+                        <article class="card" data-course-title="Software Requirements Engineering CSE6224" data-course-code="CSE6224" data-course-keywords="requirements elicitation analysis specification validation">
+                            <div class="card-header">
+                                <p class="card-tag">Year 2</p>
+                                <h3><a href="CSE6224.html" class="no-underline">Software Requirements Engineering</a></h3>
+                                <p class="course-code">CSE6224</p>
+                                <div class="card-description">Learn elicitation, analysis, modeling, and validation of software requirements.</div>
+                            </div>
+                            <div class="card-nav">
+                                <a href="CSE6224.html#lecture-notes">Lecture Notes</a>
+                                <a href="CSE6224.html#tutorial">Tutorial</a>
+                                <a href="CSE6224.html#PYQ">PYQ</a>
+                            </div>
+                        </article>
+
+                        <article class="card" data-course-title="Software Design CSE6234" data-course-code="CSE6234" data-course-keywords="software design patterns architecture modularity">
+                            <div class="card-header">
+                                <p class="card-tag">Year 2</p>
+                                <h3><a href="CSE6234.html" class="no-underline">Software Design</a></h3>
+                                <p class="course-code">CSE6234</p>
+                                <div class="card-description">Engineer reusable, scalable software using strong design principles.</div>
+                            </div>
+                            <div class="card-nav">
+                                <a href="CSE6234.html#lecture-notes">Lecture Notes</a>
+                                <a href="CSE6234.html#tutorial">Tutorial</a>
+                                <a href="CSE6234.html#PYQ">PYQ</a>
+                            </div>
+                        </article>
+
+                        <article class="card" data-course-title="Blockchain and Smart Contracts CCS6354" data-course-code="CCS6354" data-course-keywords="blockchain distributed systems cryptography smart contracts">
+                            <div class="card-header">
+                                <p class="card-tag">Year 2</p>
+                                <h3><a href="CCS6354.html" class="no-underline">Blockchain and Smart Contracts</a></h3>
+                                <p class="course-code">CCS6354</p>
+                                <div class="card-description">Understand decentralized systems, cryptography, and smart contract workflows.</div>
+                            </div>
+                            <div class="card-nav">
+                                <a href="CCS6354.html#lecture-notes">Lecture Notes</a>
+                                <a href="CCS6354.html#tutorial">Tutorial</a>
+                                <a href="CCS6354.html#PYQ">PYQ</a>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+
+                <button class="accordion-btn" aria-expanded="false">Year 3 <span>In progress</span></button>
+                <div class="accordion-content">
+                    <div class="empty-state">
+                        <h3>Next layer ready</h3>
+                        <p>This section is ready for future modules, capstone work, advanced notes, and course-specific revisions.</p>
+                    </div>
+                </div>
+            </div>
+
+            <p id="course-search-status" class="course-search-status" aria-live="polite"></p>
+        </section>
+
+        <section id="learning-path" class="overview-strip learning-path" data-animate="fadeUp" aria-label="Study flow">
+            <article>
+                <h2>1. Review concepts</h2>
+                <p>Start from lecture notes to build foundation and terminology.</p>
+            </article>
+            <article>
+                <h2>2. Practice actively</h2>
+                <p>Move to tutorials and examples so concepts become repeatable skills.</p>
+            </article>
+            <article>
+                <h2>3. Test under pressure</h2>
+                <p>Use PYQ and previous assessments to revise in exam conditions.</p>
+            </article>
+        </section>
+
+        <section id="projects" class="projects-section" data-animate="fadeUp">
+            <div class="section-heading">
+                <p class="eyebrow">Practice and portfolio</p>
+                <h2>Recent GitHub projects</h2>
+                <p>The platform also highlights implementation work so study stays connected to real software practice.</p>
+            </div>
+            <div class="project-grid" id="github-projects" aria-live="polite"></div>
+            <div class="projects-actions">
+                <a href="https://github.com/Amena15?tab=repositories" target="_blank" rel="noopener noreferrer" class="secondary-btn">See More Projects</a>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer" class="site-footer" data-animate="fadeUp">
+        <div class="footer-copy-only">
+            <span class="footer-copyright">© <span id="year"></span> AmenaTech. All rights reserved.</span>
+        </div>
+
+        <div class="social-icons" aria-label="Social links">
+            <a href="mailto:amena_mohammed15@outlook.com" aria-label="Email">
+                <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path d="M20 4H4c-1.103 0-2 .897-2 2v12c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zm0 2v.511l-8 6.223-8-6.222V6h16zM4 18V9.044l7.386 5.745a.994.994 0 0 0 1.228 0L20 9.044 20.002 18H4z"></path>
+                </svg>
+            </a>
+            <a href="https://github.com/Amena15" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"></path>
+                </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/amena-mohammed-8a2587287/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path d="M20 3H4a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zM8.339 18.337H5.667v-8.59h2.672v8.59zM7.003 8.574a1.548 1.548 0 1 1 0-3.096 1.548 1.548 0 0 1 0 3.096zm11.335 9.763h-2.669V14.16c0-.996-.018-2.277-1.388-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248h-2.667v-8.59h2.56v1.174h.037c.355-.675 1.227-1.387 2.524-1.387 2.704 0 3.203 1.778 3.203 4.092v4.71z"></path>
+                </svg>
+            </a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
